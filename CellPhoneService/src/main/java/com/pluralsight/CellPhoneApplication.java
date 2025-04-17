@@ -51,6 +51,6 @@ public class CellPhoneApplication {
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone number: " + phone.getPhoneNumber());
         System.out.println("Owner: " + phone.getOwner());
-        System.out.println("/n");
+        System.out.println("\n");
     }
 }
