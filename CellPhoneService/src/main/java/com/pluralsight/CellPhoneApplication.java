@@ -8,6 +8,7 @@ public class CellPhoneApplication {
 
         Cellphone myPhone = new Cellphone();
         Cellphone myPhone2 = new Cellphone();
+        Cellphone myPhone3 = new Cellphone(123, "iphone", "verizon", "000-000-0000","izel" );
         //myPhone is instance and object
 
         //scanner method
@@ -17,14 +18,18 @@ public class CellPhoneApplication {
         //display phone info
         display(myPhone);
         display(myPhone2);
+        display(myPhone3);
 
         //call dial method
         myPhone.dial(myPhone2.getPhoneNumber());
         myPhone2.dial(myPhone.getPhoneNumber());
+        myPhone2.dial(myPhone3.getPhoneNumber());
 
+        myPhone3.dial(myPhone2);
     }
 
     public static void fillCellPhoneFromScanner(Scanner scanner, Cellphone phone, int index) {
+
         System.out.println("Details for phone #" + index);
 
         System.out.println("What is the serial number?");
@@ -42,6 +47,8 @@ public class CellPhoneApplication {
 
         System.out.println("Who is the owner of the phone?");
         phone.setOwner(scanner.nextLine());
+
+
     }
 
     public static void display (Cellphone phone){
