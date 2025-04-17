@@ -7,8 +7,8 @@ public class Cellphone {
     private String carrier;
     private String phoneNumber;
     private String owner;
-    //constructor
 
+    // default constructor
     public Cellphone() {
         this.serialNumber = 0;
         this.model = "";
@@ -16,7 +16,7 @@ public class Cellphone {
         this.phoneNumber = "";
         this.owner = "";
     }
-
+    //overloaded constructor
     public Cellphone(int serialNumber, String model,String carrier, String phoneNumber, String owner) {
         this.serialNumber = serialNumber;
         this.model = model;
@@ -65,9 +65,11 @@ public class Cellphone {
         this.owner = owner;
     }
 
+    //dial method and overloaded dial
     public void dial(String phoneNumber){
         System.out.println(this.owner + "'s phone calling " + phoneNumber);
     }
+    //cellphone object has get/set methods so I can use to get owner and phone number.
     public void dial(Cellphone phone){
         System.out.println(phone.getOwner() + "'s phone calling " + phone.getPhoneNumber());
     }

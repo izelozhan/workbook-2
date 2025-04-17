@@ -6,12 +6,12 @@ public class CellPhoneApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        //myPhone is instance or object /
         Cellphone myPhone = new Cellphone();
         Cellphone myPhone2 = new Cellphone();
         Cellphone myPhone3 = new Cellphone(123, "iphone", "verizon", "000-000-0000","izel" );
-        //myPhone is instance and object
 
-        //scanner method
+        //scanner method // take users input with scanner, phone and index params
         fillCellPhoneFromScanner(scanner, myPhone, 1);
         fillCellPhoneFromScanner(scanner, myPhone2, 2);
 
@@ -25,6 +25,7 @@ public class CellPhoneApplication {
         myPhone2.dial(myPhone.getPhoneNumber());
         myPhone2.dial(myPhone3.getPhoneNumber());
 
+        //overloaded dial method 
         myPhone3.dial(myPhone2);
     }
 
