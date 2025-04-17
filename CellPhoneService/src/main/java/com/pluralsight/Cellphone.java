@@ -1,21 +1,19 @@
 package com.pluralsight;
 
 public class Cellphone {
-
     //instance variables
-    int serialNumber;
-    String model;
-    String carrier;
-    String phoneNumber;
-    String owner;
-
+    private int serialNumber;
+    private String model;
+    private String carrier;
+    private String phoneNumber;
+    private String owner;
     //constructor
-    public Cellphone(){
-        serialNumber = 0;
-        model = "";
-        carrier = "";
-        phoneNumber = "";
-        owner = "";
+    public Cellphone() {
+        this.serialNumber = 0;
+        this.model = "";
+        this.carrier = "";
+        this.phoneNumber = "";
+        this.owner = "";
     }
 
     public int getSerialNumber() {
@@ -58,5 +56,7 @@ public class Cellphone {
         this.owner = owner;
     }
 
-
+    public void dial(String phoneNumber){
+        System.out.println(this.owner + "s phone calling " + phoneNumber);
+    }
 }

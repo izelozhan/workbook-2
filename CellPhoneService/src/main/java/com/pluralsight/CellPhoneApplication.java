@@ -5,31 +5,52 @@ import java.util.Scanner;
 public class CellPhoneApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         Cellphone myPhone = new Cellphone();
+        Cellphone myPhone2 = new Cellphone();
+        //myPhone is instance and object
+
+        //scanner method
+        fillCellPhoneFromScanner(scanner, myPhone, 1);
+        fillCellPhoneFromScanner(scanner, myPhone2, 2);
+
+        //display phone info
+        display(myPhone);
+        display(myPhone2);
+
+        //call dial method
+        myPhone.dial(myPhone2.getPhoneNumber());
+        myPhone2.dial(myPhone.getPhoneNumber());
+
+    }
+
+    public static void fillCellPhoneFromScanner(Scanner scanner, Cellphone phone, int index) {
+        System.out.println("Details for phone #" + index);
 
         System.out.println("What is the serial number?");
-        myPhone.setSerialNumber(scanner.nextInt());
+        phone.setSerialNumber(scanner.nextInt());
         scanner.nextLine();
 
         System.out.println("What model is the phone?");
-        myPhone.setModel(scanner.nextLine());
+        phone.setModel(scanner.nextLine());
 
         System.out.println("Who is the carrier?");
-        myPhone.setCarrier(scanner.nextLine());
+        phone.setCarrier(scanner.nextLine());
 
         System.out.println("What is the phone number?");
-        myPhone.setPhoneNumber(scanner.nextLine());
+        phone.setPhoneNumber(scanner.nextLine());
 
         System.out.println("Who is the owner of the phone?");
-        myPhone.setOwner(scanner.nextLine());
+        phone.setOwner(scanner.nextLine());
+    }
 
-        System.out.println("Serial number: " + myPhone.getSerialNumber());
-        System.out.println("Phone model: " + myPhone.getModel());
-        System.out.println("Carrier: " + myPhone.getCarrier());
-        System.out.println("Phone number: " + myPhone.getPhoneNumber());
-        System.out.println("Owner: " + myPhone.getOwner());
-
-
-
+    public static void display (Cellphone phone){
+        System.out.println("Phone details;\n");
+        System.out.println("Serial number: " + phone.getSerialNumber());
+        System.out.println("Phone model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone number: " + phone.getPhoneNumber());
+        System.out.println("Owner: " + phone.getOwner());
+        System.out.println("/n");
     }
 }
