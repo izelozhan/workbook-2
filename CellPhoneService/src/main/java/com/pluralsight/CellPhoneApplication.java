@@ -25,7 +25,7 @@ public class CellPhoneApplication {
         myPhone2.dial(myPhone.getPhoneNumber());
         myPhone2.dial(myPhone3.getPhoneNumber());
 
-        //overloaded dial method 
+        //overloaded dial method
         myPhone3.dial(myPhone2);
     }
 
